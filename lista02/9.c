@@ -12,7 +12,7 @@ int potencia(int num1, int num2){
         return 1;
     }
 
-    return num1*pot(num1,num2-1);
+    return num1*potencia(num1,num2-1);
 
 }
 
@@ -24,4 +24,3 @@ int potencia(int num1, int num2){
     scanf("%d %d",&num1,&num2);
     printf ("Saida: %d\n", potencia(num1,num2));
 }
-
