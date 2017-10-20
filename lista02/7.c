@@ -10,6 +10,9 @@
  * Autor: Laura Amaral
  * Data: 20/10/2017
  */
+#include <stdio.h>
+#include <math.h>
+
 
  int conv_temp (int un2, float valor) {
     char unidade;
@@ -59,6 +62,53 @@ int temperatura (int un1,int un2, float valor){
     }
     conv_temp(un2,valor);
 }
+
+
+
+int dec_bin (int valor) {
+    int n=valor, n_bin=0, i=0;
+    while (n) {
+        n_bin+=(n%2*pow(10,i));
+        n/=2;
+        i++;
+    }
+    printf ("Saida: %d \n", n_bin);
+
+}
+
+int bin_dec (int valor) {
+    int n=valor,n_dec=0,i=0;
+    while (n) {
+        n_dec+=(n%2*pow(2,i));
+        n/=10;
+        i++;
+    }
+    printf ("Saida: %d \n", n_dec);
+}
+
+int binario(int un1, int un2, float valor){
+    if (un1==un2) {
+
+        printf ("Saida: %f\n", valor);
+        return 0;
+    }
+
+    int valor_int;
+    valor_int = (int) valor;
+
+    switch (un1) {
+
+        case 1:
+            dec_bin(valor);
+        break;
+        case 2:
+            bin_dec(valor);
+        break;
+
+    }
+
+}
+
 
 
 int conversao(int conv, int un1, int un2, float valor){
