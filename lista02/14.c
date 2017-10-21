@@ -19,17 +19,14 @@ int espelhar(int m) {
   return espelho;
 }
 
-
-char palindromo(int m) {
-  if (espelhar(m)==m) return 's';
-  return 'n';
-}
-
-
 int main() {
 
     int num;
     scanf("%d",&num);
-    printf("%c\n", palindromo(num));
+    if (espelhar(num)==num){
+      printf("sim"); 
+    } else {
+      printf("nao"); 
+    }
 
 }
